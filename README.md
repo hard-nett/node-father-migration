@@ -51,5 +51,5 @@ node main.js -5
 ```
 ## 9. Clawback assets
 ```sh 
-node main.js -5
+node main.js -6
 ```
