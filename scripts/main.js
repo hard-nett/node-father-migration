@@ -64,8 +64,6 @@ if (args.length < 1) {
     migrate_contract();
 } else if (args[0] === '-6') {
     clawback_assets();
-} else if (args[0] === '-7') {
-    migrate_contracts();
 } else if (args[0] === '-8') {
     query_contract_info();
 } else if (args[0] === '-9') {

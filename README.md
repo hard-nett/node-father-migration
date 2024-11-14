@@ -11,6 +11,8 @@ sh scripts/build.sh
 
 # Testing The Migration 
 
+in `scripts/main.js`, we use two keys to test the migration: `wallet` and `oldWallet`. during migration, `oldWallet` is expected to be the wasmVm level admin authroized to migrate. multiple wallets were used for testing purposes. `secret1j7tmjrh5wkxf4yx0kas0ja4an6wktss7mvqenm` is the wallet address hard-coded as migrated contracts admin. 
+
 ## 0. Install secretjs
 ```sh 
 cd scripts && yarn 
