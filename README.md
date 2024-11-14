@@ -23,25 +23,25 @@ cd scripts && yarn
 node main.js -1
 ```
 
-## 2. Populate code-ID and code hash into scripts
-this is done manually in main.js
+## 2. Populate test contract code-ID and code hash into scripts
+this is done manually in main.js,  line # 34-35
 
 ## 3. Upload migration contract 
 ```sh
 node main.js -2
 ```
-## 4. Populate code-ID and code hash into scripts
-this is done manually in main.js
+## 4. Populate migration contract code-ID and code hash into scripts
+this is done manually in main.js, line # 36-37
 
 ## 5. Instantiate test contract
 ```sh
 node main.js -3
 ```
 
-## 6. Populate contract addr into scripts
-this is done manually in main.js
+## 6. Populate test contract addr into scripts
+this is done manually in main.js, line # 41
 
-## 7. Fund test contract with sscrt & stkd-scrt 
+## 7. Fund test contract with sscrt & stkd-scrt  (or manually)
 ```sh
 node main.js -4 
 ```
