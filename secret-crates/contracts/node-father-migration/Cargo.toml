@@ -1,0 +1,47 @@
+[package]
+name = "node-father-migration"
+version = "0.1.0"
+authors = ["TerpNETFoundation"]
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+
+[features]
+default = []
+
+# for quicker tests, cargo test --lib
+# for more explicit tests, cargo test --features=backtraces
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+
+[dependencies]
+semver = "1.0"
+cosmwasm-std = { package = "secret-cosmwasm-std", version = "1.1.11", default-features = false,features = [
+  "stargate",
+  "staking",
+  "ibc3",
+  "random",
+] }
+cosmwasm-schema = "1.1.8"
+cosmwasm-storage = { package = "secret-cosmwasm-storage", version = "1.1.11" }
+schemars = { version = "0.8.11" }
+serde = { version = "1.0" }
+thiserror = { version = "1.0" }
+secret-toolkit-crypto = { git = "https://github.com/SolarRepublic/secret-toolkit.git", default-features = false, features = ["hash"] }
+secret-toolkit = { git = "https://github.com/SolarRepublic/secret-toolkit.git", default-features = false, features = ["permit", "snip20","storage", "viewing-key", "notification"] }
+cc = "1.1.10"
+
+[dev-dependencies]
+mock-contract = {path = "../mock-contract"}
+
+# [patch.crates-io]
+# uncomment this if you use cw-storage-plus
+
+[[bin]]
+name = "schema"
+required-features = ["schema"]
+
